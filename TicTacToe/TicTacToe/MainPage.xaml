@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TicTacToe"
+             x:Class="TicTacToe.MainPage">
+
+    <Grid Margin="0,20,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Label Text="You (X)" Grid.Row="0" Grid.Column="0" Margin="5"/>
+        <Label Text="Opponent (O)" Grid.Row="0" Grid.Column="2" Margin="5" HorizontalTextAlignment="End"/>
+
+        <Button x:Name="button1" Text="" Grid.Row="1" Grid.Column="0" BackgroundColor="Gray" Clicked="button_Clicked"/>
+        <Button x:Name="button2" Text="" Grid.Row="1" Grid.Column="1" BackgroundColor="Gray" Clicked="button_Clicked"/>
+        <Button x:Name="button3" Text="" Grid.Row="1" Grid.Column="2" BackgroundColor="Gray" Clicked="button_Clicked"/>
+        <Button x:Name="button4" Text="" Grid.Row="2" Grid.Column="0" BackgroundColor="Gray" Clicked="button_Clicked"/>
+        <Button x:Name="button5" Text="" Grid.Row="2" Grid.Column="1" BackgroundColor="Gray" Clicked="button_Clicked"/>
+        <Button x:Name="button6" Text="" Grid.Row="2" Grid.Column="2" BackgroundColor="Gray" Clicked="button_Clicked"/>
+        <Button x:Name="button7" Text="" Grid.Row="3" Grid.Column="0" BackgroundColor="Gray" Clicked="button_Clicked"/>
+        <Button x:Name="button8" Text="" Grid.Row="3" Grid.Column="1" BackgroundColor="Gray" Clicked="button_Clicked"/>
+        <Button x:Name="button9" Text="" Grid.Row="3" Grid.Column="2" BackgroundColor="Gray" Clicked="button_Clicked"/>
+
+        <StackLayout x:Name="GameOverStackLayout" Grid.Row="0" Grid.Column="1" IsVisible="False">
+            <Label Text="Game Over" HorizontalTextAlignment="Center"/>
+            <Button Text="Play again" Clicked="playagain_Clicked"/>
+        </StackLayout>
+
+    </Grid>
+
+</ContentPage>
